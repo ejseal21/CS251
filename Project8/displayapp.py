@@ -464,7 +464,7 @@ class DisplayApp:
         self.updatePoints()
 
     def handleNewWindow(self):
-        newdapp = DisplayApp(700, 500)
+        newdapp = DisplayApp(1200, 1200)
 
     # create the axis line objects in their default location
     def buildAxes(self):
@@ -1229,6 +1229,6 @@ class MeansDialog(Dialog):
         return False
 
 if __name__ == "__main__":
-    dapp = DisplayApp(700, 1000)
+    dapp = DisplayApp(1200, 1200)
     dapp.main()
 
