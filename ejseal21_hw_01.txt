@@ -1,0 +1,71 @@
+﻿1.
+1. The two scales used are color and position.
+2. The variables on y-axis are countries and the variables that determine the color are some sort of political or economic ideology
+3. Permuting the rows would be confusing, but technically correct. Permuting the color scale mapping would be maybe a little confusing because the more conservative ideologies are shown in red and the more liberal ones are shown in blue, which matches standard representations of conservative and liberal, at least in the US. However, this would also be technically correct.
+4. One important constraint is to make sure that all of the data points above (or below) also move so as to prevent overlapping. Additionally, the labels on the y-axis in this case should move so that it remains clear which data the labels are referring to.
+
+
+2.
+a)
+25        10
+35        20
+75        40
+35        110
+25        60
+
+
+b)
+Translation:
+25-25        10-10
+35-25        20-10
+75-25        40-10
+35-25        110-10
+25-25        60-10
+
+
+=
+
+
+0        0
+10        10
+50        30
+10        100
+0        50
+
+
+Scale:
+
+
+1        0        1/50
+0        1        1/100
+0        0        1
+
+
+c) (0,0), (0.2,0.1), (1,0.3), (0.2,1),(0,0.5)
+0        0
+0.2        0.1
+1        0.3
+0.2        1
+0        0.5
+
+
+d) 
+400        0
+0        -200
+
+
+
+
+e)
+0        0
+80        -20
+400        -60
+80        -200
+0        -100
+
+
+
+
+3.
+1. It will turn it into a row vector with the first value being the reciprocal of the first value in the data column vector and the other two values will be 0
+2. Yes, the homogeneous coordinate is always necessary. It allows us to transform data in-place.
