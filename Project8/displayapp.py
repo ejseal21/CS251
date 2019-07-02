@@ -10,7 +10,7 @@ import view
 from tkinter import filedialog
 import data
 import analysis
-import pyscreenshot as ImageGrab
+# import pyscreenshot as ImageGrab
 
 # create a class to build and manage the display
 class DisplayApp:
@@ -525,7 +525,7 @@ class DisplayApp:
         self.canvas.bind('<B3-Motion>', self.handleButton3Motion)
         self.root.bind('<Control-q>', self.handleQuit)
         self.root.bind('<Control-o>', self.handleModO)
-        self.root.bind('<Control-l>', self.handleGrab)
+        # self.root.bind('<Control-l>', self.handleGrab)
         self.root.bind('<Delete>', self.handleDelete)
         # Extension 2 lets the user use more intuitive controls to scale
         self.canvas.bind('<Shift-Button-1>', self.handleButton3)
@@ -540,12 +540,12 @@ class DisplayApp:
             self.PCAlistbox.delete(selections[i])
             del self.PCAs[selections[i]]
          
-    def handleGrab(self, file_path='image.jpg'):
-        box = (self.root.winfo_rootx(), self.root.winfo_rooty(), self.root.winfo_rootx() +  1.28 * self.root.winfo_width(),
-               self.root.winfo_rooty() + 1.28 * self.root.winfo_height())
-        grab = ImageGrab.grab(bbox=box)
-        grab.save('img.jpg')
-        print("saved image")
+    # def handleGrab(self, file_path='image.jpg'):
+    #     box = (self.root.winfo_rootx(), self.root.winfo_rooty(), self.root.winfo_rootx() +  1.28 * self.root.winfo_width(),
+    #            self.root.winfo_rooty() + 1.28 * self.root.winfo_height())
+    #     # grab = ImageGrab.grab(bbox=box)
+    #     # grab.save('img.jpg')
+    #     print("saved image")
 
     def buildPoints(self, headers):
         print("\n\nheaders for buildPoints:",headers)
@@ -920,7 +920,7 @@ class Dialog(tk.Toplevel):
         self.initial_focus = self.body(body)
         body.pack(padx=5, pady=5)
         self.buttonbox()
-        self.grab_set()
+        # self.grab_set()
         if not self.initial_focus:
             self.initial_focus = self
         self.protocol("WM_DELETE_WINDOW", self.cancel)
